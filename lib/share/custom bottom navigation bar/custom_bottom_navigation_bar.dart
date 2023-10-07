@@ -41,48 +41,54 @@ class _BottomNavigationbarState extends State<BottomNavigationbar> {
           topLeft: Radius.circular(15.0),
           topRight: Radius.circular(15.0),
         ),
-        child: BottomNavigationBar(
-          backgroundColor: Colors.transparent,
-          selectedItemColor: globalColors.primaryColor,
-          unselectedItemColor: globalColors.GreyColor,
-          items: [
-            BottomNavigationBarItem(
-              icon: _currentindex == 0
-                  ? Image.asset('assets/images/SelectedHome.png')
-                  : Image.asset('assets/images/UnSelectedHome.png'),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: _currentindex == 1
-                  ? Image.asset('assets/images/SelectedAppointments.png')
-                  : Image.asset('assets/images/UnSelectedAppointments.png'),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: _currentindex == 2
-                  ? Image.asset('assets/images/SelectedMedicine.png')
-                  : Image.asset('assets/images/UnSelectedMedicine.png'),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: _currentindex == 3
-                  ? Image.asset('assets/images/SelectedNotification.png')
-                  : Image.asset('assets/images/UnSelectedNotification.png'),
-              label: 'Search',
-            ),
-            BottomNavigationBarItem(
-              icon: _currentindex == 4
-                  ? Image.asset('assets/images/SelectedMore.png')
-                  : Image.asset('assets/images/UnSelectedMore.png'),
-              label: 'Profile',
-            ),
-          ],
-          currentIndex: _currentindex,
-          onTap: (value) {
-            setState(() {
-              _currentindex = value;
-            });
-          },
+        child: Theme(
+          data: ThemeData(
+            canvasColor: globalColors.WhiteColor,
+          ),
+          child: BottomNavigationBar(
+            backgroundColor: globalColors.WhiteColor,
+            selectedItemColor: globalColors.primaryColor,
+            unselectedItemColor: globalColors.GreyColor,
+            showUnselectedLabels: true,
+            items: [
+              BottomNavigationBarItem(
+                icon: _currentindex == 0
+                    ? Image.asset('assets/images/SelectedHome.png')
+                    : Image.asset('assets/images/UnSelectedHome.png'),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: _currentindex == 1
+                    ? Image.asset('assets/images/SelectedAppointments.png')
+                    : Image.asset('assets/images/UnSelectedAppointments.png'),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: _currentindex == 2
+                    ? Image.asset('assets/images/SelectedMedicine.png')
+                    : Image.asset('assets/images/UnSelectedMedicine.png'),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: _currentindex == 3
+                    ? Image.asset('assets/images/SelectedNotification.png')
+                    : Image.asset('assets/images/UnSelectedNotification.png'),
+                label: 'Search',
+              ),
+              BottomNavigationBarItem(
+                icon: _currentindex == 4
+                    ? Image.asset('assets/images/SelectedMore.png')
+                    : Image.asset('assets/images/UnSelectedMore.png'),
+                label: 'Profile',
+              ),
+            ],
+            currentIndex: _currentindex,
+            onTap: (value) {
+              setState(() {
+                _currentindex = value;
+              });
+            },
+          ),
         ),
       ),
     );
