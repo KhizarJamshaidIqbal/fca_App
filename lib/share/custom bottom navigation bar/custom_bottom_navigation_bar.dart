@@ -38,8 +38,8 @@ class _BottomNavigationbarState extends State<BottomNavigationbar> {
       extendBody: true,
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(15.0),
-          topRight: Radius.circular(15.0),
+          topLeft: Radius.circular(10.0),
+          topRight: Radius.circular(10.0),
         ),
         child: Theme(
           data: ThemeData(
