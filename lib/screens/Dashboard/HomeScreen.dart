@@ -146,85 +146,94 @@ class HomeScreen extends StatelessWidget {
                           ],
                         ),
                         10.h,
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              height: 30,
-                              width: 74,
-                              decoration: const BoxDecoration(
-                                color: Color(0xffF2EAFE),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(8.0)),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10.0),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Image.asset('assets/images/calendar.png'),
-                                    const CustomText(
-                                        text: '10 Oct',
-                                        color: globalColors.primaryColor,
-                                        fontsize: 12,
-                                        fontWeight: FontWeight.w400,
-                                        textDecoration: TextDecoration.none),
-                                  ],
+                        Flexible(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                height: 30,
+                                width: 74,
+                                decoration: const BoxDecoration(
+                                  color: Color(0xffF2EAFE),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8.0)),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Flexible(
+                                          child: Image.asset(
+                                              'assets/images/calendar.png')),
+                                      const CustomText(
+                                          text: '10 Oct',
+                                          color: globalColors.primaryColor,
+                                          fontsize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          textDecoration: TextDecoration.none),
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            Container(
-                              height: 30,
-                              width: 161,
-                              decoration: const BoxDecoration(
-                                color: globalColors.BlueColor,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(8.0)),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10.0),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Image.asset('assets/images/clock.png'),
-                                    const CustomText(
-                                        text: '08:00 AM - 08:30 AM',
-                                        color: globalColors.DarkBlueColor,
-                                        fontsize: 12,
-                                        fontWeight: FontWeight.w400,
-                                        textDecoration: TextDecoration.none),
-                                  ],
+                              Container(
+                                height: 30,
+                                width: 161,
+                                decoration: const BoxDecoration(
+                                  color: globalColors.BlueColor,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8.0)),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Flexible(
+                                          child: Image.asset(
+                                              'assets/images/clock.png')),
+                                      const CustomText(
+                                          text: '08:00 AM - 08:30 AM',
+                                          color: globalColors.DarkBlueColor,
+                                          fontsize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          textDecoration: TextDecoration.none),
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            Container(
-                              height: 30,
-                              width: 74,
-                              decoration: const BoxDecoration(
-                                color: globalColors.LightPinkColor,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(8.0)),
-                              ),
-                              child: const Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10.0),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    CustomText(
-                                        text: 'Online',
-                                        color: globalColors.AccentColor,
-                                        fontsize: 12,
-                                        fontWeight: FontWeight.w400,
-                                        textDecoration: TextDecoration.none),
-                                  ],
+                              Flexible(
+                                child: Container(
+                                  height: 30,
+                                  width: 74,
+                                  decoration: const BoxDecoration(
+                                    color: globalColors.LightPinkColor,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(8.0)),
+                                  ),
+                                  child: const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 10.0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        CustomText(
+                                            text: 'Online',
+                                            color: globalColors.AccentColor,
+                                            fontsize: 12,
+                                            fontWeight: FontWeight.w400,
+                                            textDecoration: TextDecoration.none),
+                                      ],
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),
