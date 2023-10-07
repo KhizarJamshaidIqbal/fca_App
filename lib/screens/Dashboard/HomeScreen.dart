@@ -188,7 +188,7 @@ class HomeScreen extends StatelessWidget {
                                     horizontal: 10.0),
                                 child: Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                      MainAxisAlignment.spaceAround,
                                   children: [
                                     Image.asset('assets/images/clock.png'),
                                     const CustomText(
