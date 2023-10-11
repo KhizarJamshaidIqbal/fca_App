@@ -2,7 +2,7 @@
 
 import 'package:fca/utils/colors.dart';
 import 'package:flutter/material.dart';
-import '../../screens/Dashboard/HomeScreen.dart';
+import '../../screens/Dashboard/HomeScreen2.dart';
 
 class BottomNavigationbar extends StatefulWidget {
   const BottomNavigationbar({super.key});
@@ -15,15 +15,15 @@ class _BottomNavigationbarState extends State<BottomNavigationbar> {
   int _currentindex = 0;
 
   var ScreenList = [
-    HomeScreen(),
+    HomeScreen2(),
     Center(
       child: Text('History'),
     ),
     Center(
-      child: Text('Medicine'),
+      child: Text('Payments'),
     ),
     Center(
-      child: Text('Notification'),
+      child: Text('Messages'),
     ),
     Center(
       child: Text('More'),
@@ -65,15 +65,15 @@ class _BottomNavigationbarState extends State<BottomNavigationbar> {
               ),
               BottomNavigationBarItem(
                 icon: _currentindex == 2
-                    ? Image.asset('assets/images/SelectedMedicine.png')
-                    : Image.asset('assets/images/UnSelectedMedicine.png'),
-                label: 'Home',
+                    ? Image.asset('assets/images/SelectedAmount.png')
+                    : Image.asset('assets/images/UnSelectedAmount.png'),
+                label: 'Payments',
               ),
               BottomNavigationBarItem(
                 icon: _currentindex == 3
-                    ? Image.asset('assets/images/SelectedNotification.png')
-                    : Image.asset('assets/images/UnSelectedNotification.png'),
-                label: 'Search',
+                    ? Image.asset('assets/images/SelectedMessages.png')
+                    : Image.asset('assets/images/UnSelectedMessages.png'),
+                label: 'Messages',
               ),
               BottomNavigationBarItem(
                 icon: _currentindex == 4

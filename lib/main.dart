@@ -15,10 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'FCA',
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      //   useMaterial3: true,
-      // ),
       home: BottomNavigationbar(),
     );
   }
