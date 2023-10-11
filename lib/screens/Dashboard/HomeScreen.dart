@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 
 import '../../share/custom widgets/custom_Text_Widget.dart';
 
-class HomeScreen2 extends StatelessWidget {
-  HomeScreen2({super.key});
+class HomeScreen extends StatelessWidget {
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -144,6 +144,7 @@ class HomeScreen2 extends StatelessWidget {
                               child: ElevatedButton(
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
+                                      elevation: 0,
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(6.0),
@@ -163,6 +164,7 @@ class HomeScreen2 extends StatelessWidget {
                               child: ElevatedButton(
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
+                                      elevation: 0,
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(6.0),

@@ -2,7 +2,7 @@
 
 import 'package:fca/utils/colors.dart';
 import 'package:flutter/material.dart';
-import '../../screens/Dashboard/HomeScreen2.dart';
+import '../../screens/Dashboard/HomeScreen.dart';
 
 class BottomNavigationbar extends StatefulWidget {
   const BottomNavigationbar({super.key});
@@ -15,7 +15,7 @@ class _BottomNavigationbarState extends State<BottomNavigationbar> {
   int _currentindex = 0;
 
   var ScreenList = [
-    HomeScreen2(),
+    HomeScreen(),
     Center(
       child: Text('History'),
     ),
