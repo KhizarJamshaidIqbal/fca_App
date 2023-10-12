@@ -3,7 +3,7 @@
 import 'package:fca/utils/app_size.dart';
 import 'package:fca/utils/colors.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../share/custom widgets/custom_Text_Widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 20.h,
                 Container(
-                  height: MediaQuery.of(context).size.height * .23,
+                  height: 170,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
@@ -90,8 +90,10 @@ class HomeScreen extends StatelessWidget {
                         Row(
                           children: [
                             Flexible(
-                                child:
-                                    Image.asset('assets/images/calendar.png')),
+                              child: SvgPicture.asset(
+                                'assets/images/calendar.svg',
+                              ),
+                            ),
                             5.w,
                             const CustomText(
                                 text: '10 Oct',
@@ -107,7 +109,9 @@ class HomeScreen extends StatelessWidget {
                             ),
                             10.w,
                             Flexible(
-                                child: Image.asset('assets/images/clock.png')),
+                                child: SvgPicture.asset(
+                              'assets/images/clock.svg',
+                            )),
                             5.w,
                             const CustomText(
                                 text: '08:00 AM - 08:30 AM',
@@ -213,8 +217,9 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 15.h,
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * .132,
+                Container(
+                  color: globalColors.BackgroundColor,
+                  height: 98,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: fca_data.length,
@@ -250,7 +255,7 @@ class HomeScreen extends StatelessWidget {
                                         child: SizedBox(
                                           height: 18,
                                           width: 18,
-                                          child: Image.asset(
+                                          child: SvgPicture.asset(
                                               fca_data[index]["main_img"]),
                                         )),
                                     12.w,
@@ -322,7 +327,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 15.h,
                 Container(
-                  height: MediaQuery.of(context).size.height * .317,
+                  height: 210,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: const Color(0xffFFFFFF),
@@ -339,15 +344,16 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       SizedBox(
-                        height: 200,
+                        height: 210,
                         child: Stack(
                           clipBehavior: Clip.none,
                           children: [
                             Positioned(
-                                top: -14,
+                                top: -13,
                                 child: Image.asset('assets/images/Mask.png')),
                             Positioned(
                               left: 0,
+                              top: -5,
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     top: 20.0, left: 20.0),
@@ -360,12 +366,31 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ),
                             Positioned(
-                                left: 0,
-                                top: 40.0,
-                                child: Image.asset('assets/images/bill.png')),
+                                left: 20,
+                                top: 45.0,
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    gradient: RadialGradient(
+                                      colors: [
+                                        Color(0xFF3CBCEB),
+                                        Color(0xFF0072B8)
+                                      ],
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: SvgPicture.asset(
+                                      'assets/images/invoice.svg',
+                                      height: 25,
+                                      width: 25,
+                                    ),
+                                  ),
+                                )),
                             Positioned(
-                              left: 85,
-                              top: 58.0,
+                              left: 88,
+                              top: 53.0,
                               child: CustomText(
                                   text: 'Payment\nOverdue',
                                   color: globalColors.BlackColor,
@@ -374,28 +399,35 @@ class HomeScreen extends StatelessWidget {
                                   textDecoration: TextDecoration.none),
                             ),
                             Positioned(
-                              left: 205,
-                              top: 56.0,
+                                left: 208,
+                                top: 50.0,
+                                child: SvgPicture.asset(
+                                  'assets/images/dollar.svg',
+                                )),
+                            Positioned(
+                              left: 225,
+                              top: 47.0,
                               child: CustomText(
-                                  text: '\$264.67',
-                                  color: globalColors.BlackColor,
+                                  text: '264.67',
+                                  color: Color(0xff291E3A),
                                   fontsize: 36,
                                   fontWeight: FontWeight.w700,
                                   textDecoration: TextDecoration.none),
                             ),
                             Positioned(
                                 left: 0,
-                                top: 120.0,
+                                top: 115.0,
+                                right: 0,
                                 child: Container(
                                   height: 2.0,
-                                  width: 365,
+                                  width: 362,
                                   color: globalColors.LightGreyColor,
                                 )),
                             Positioned(
                               left: 80,
-                              top: 140.0,
+                              top: 130.0,
                               child: CustomText(
-                                  text: 'Last Payment: \$345.65 at 8/25/2023',
+                                  text: 'Last Payment:',
                                   color: globalColors.LightpurpleColor,
                                   fontsize: 12,
                                   fontWeight: FontWeight.w600,
@@ -403,7 +435,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                             Positioned(
                               left: 160,
-                              top: 140.0,
+                              top: 130.0,
                               child: CustomText(
                                   text: '\$345.65 at 8/25/2023',
                                   color: globalColors.SecondaryColor1,
@@ -413,7 +445,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                             Positioned(
                               left: 20,
-                              top: 170.0,
+                              top: 160.0,
                               child: SizedBox(
                                 height: 36,
                                 width: 150,
@@ -441,7 +473,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                             Positioned(
                               left: 197,
-                              top: 170.0,
+                              top: 160.0,
                               child: SizedBox(
                                 height: 36,
                                 width: 150,
@@ -504,84 +536,84 @@ class HomeScreen extends StatelessWidget {
   List fca_data = [
     {
       "color": const Color(0xffF2EAFE),
-      "main_img": "assets/images/pills.png",
+      "main_img": "assets/images/pills.svg",
       "tital": "metFORMIN",
       "subtital": "(500 mg tablet)",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": globalColors.BlueColor,
-      "main_img": "assets/images/syringe.png",
+      "main_img": "assets/images/syringe.svg",
       "tital": "Trulicity",
       "subtital": "0.75-0.5 mL Pen Injector",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": const Color(0xffF2EAFE),
-      "main_img": "assets/images/pills.png",
+      "main_img": "assets/images/pills.svg",
       "tital": "metFORMIN",
       "subtital": "(500 mg tablet)",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": globalColors.BlueColor,
-      "main_img": "assets/images/syringe.png",
+      "main_img": "assets/images/syringe.svg",
       "tital": "Trulicity",
       "subtital": "0.75-0.5 mL Pen Injector",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": const Color(0xffF2EAFE),
-      "main_img": "assets/images/pills.png",
+      "main_img": "assets/images/pills.svg",
       "tital": "metFORMIN",
       "subtital": "(500 mg tablet)",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": globalColors.BlueColor,
-      "main_img": "assets/images/syringe.png",
+      "main_img": "assets/images/syringe.svg",
       "tital": "Trulicity",
       "subtital": "0.75-0.5 mL Pen Injector",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": const Color(0xffF2EAFE),
-      "main_img": "assets/images/pills.png",
+      "main_img": "assets/images/pills.svg",
       "tital": "metFORMIN",
       "subtital": "(500 mg tablet)",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": globalColors.BlueColor,
-      "main_img": "assets/images/syringe.png",
+      "main_img": "assets/images/syringe.svg",
       "tital": "Trulicity",
       "subtital": "0.75-0.5 mL Pen Injector",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": const Color(0xffF2EAFE),
-      "main_img": "assets/images/pills.png",
+      "main_img": "assets/images/pills.svg",
       "tital": "metFORMIN",
       "subtital": "(500 mg tablet)",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": globalColors.BlueColor,
-      "main_img": "assets/images/syringe.png",
+      "main_img": "assets/images/syringe.svg",
       "tital": "Trulicity",
       "subtital": "0.75-0.5 mL Pen Injector",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": const Color(0xffF2EAFE),
-      "main_img": "assets/images/pills.png",
+      "main_img": "assets/images/pills.svg",
       "tital": "metFORMIN",
       "subtital": "(500 mg tablet)",
       "description": "Prescribed on 8/25/2023",
     },
     {
       "color": globalColors.BlueColor,
-      "main_img": "assets/images/syringe.png",
+      "main_img": "assets/images/syringe.svg",
       "tital": "Trulicity",
       "subtital": "0.75-0.5 mL Pen Injector",
       "description": "Prescribed on 8/25/2023",

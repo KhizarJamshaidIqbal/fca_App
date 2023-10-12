@@ -2,6 +2,7 @@
 
 import 'package:fca/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import '../../screens/Dashboard/HomeScreen.dart';
 
 class BottomNavigationbar extends StatefulWidget {
@@ -17,7 +18,7 @@ class _BottomNavigationbarState extends State<BottomNavigationbar> {
   var ScreenList = [
     HomeScreen(),
     Center(
-      child: Text('History'),
+      child: Text('Appointments'),
     ),
     Center(
       child: Text('Payments'),
@@ -53,32 +54,32 @@ class _BottomNavigationbarState extends State<BottomNavigationbar> {
             items: [
               BottomNavigationBarItem(
                 icon: _currentindex == 0
-                    ? Image.asset('assets/images/SelectedHome.png')
-                    : Image.asset('assets/images/UnSelectedHome.png'),
+                    ? SvgPicture.asset('assets/images/SelectedHome.svg')
+                    : SvgPicture.asset('assets/images/UnSelectedHome.svg'),
                 label: 'Home',
               ),
               BottomNavigationBarItem(
                 icon: _currentindex == 1
-                    ? Image.asset('assets/images/SelectedAppointments.png')
-                    : Image.asset('assets/images/UnSelectedAppointments.png'),
-                label: 'Home',
+                    ? SvgPicture.asset('assets/images/SelectedAppointments.svg')
+                    : SvgPicture.asset('assets/images/UnSelectedAppointments.svg'),
+                label: 'Appointments',
               ),
               BottomNavigationBarItem(
                 icon: _currentindex == 2
-                    ? Image.asset('assets/images/SelectedAmount.png')
-                    : Image.asset('assets/images/UnSelectedAmount.png'),
+                    ? SvgPicture.asset('assets/images/SelectedPayments.svg')
+                    : SvgPicture.asset('assets/images/UnSelectedPayments.svg'),
                 label: 'Payments',
               ),
               BottomNavigationBarItem(
                 icon: _currentindex == 3
-                    ? Image.asset('assets/images/SelectedMessages.png')
-                    : Image.asset('assets/images/UnSelectedMessages.png'),
+                    ? SvgPicture.asset('assets/images/SelectedMessages.svg')
+                    : SvgPicture.asset('assets/images/UnSelectedMessages.svg'),
                 label: 'Messages',
               ),
               BottomNavigationBarItem(
                 icon: _currentindex == 4
-                    ? Image.asset('assets/images/SelectedMore.png')
-                    : Image.asset('assets/images/UnSelectedMore.png'),
+                    ? SvgPicture.asset('assets/images/SelectedMore.svg')
+                    : SvgPicture.asset('assets/images/UnSelectedMore.svg'),
                 label: 'Profile',
               ),
             ],
