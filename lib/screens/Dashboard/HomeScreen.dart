@@ -1,10 +1,10 @@
 // ignore_for_file: unused_local_variable, non_constant_identifier_names, prefer_const_constructors, file_names, prefer_const_literals_to_create_immutables, must_be_immutable
 
-import 'package:fca/utils/app_size.dart';
-import 'package:fca/utils/colors.dart';
+import 'package:fca/constants/app_size.dart';
+import 'package:fca/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../share/custom widgets/custom_Text_Widget.dart';
+import '../../common/widgets/custom_Text_Widget.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});

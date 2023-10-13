@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names
 
-import 'package:fca/utils/colors.dart';
+import 'package:fca/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../screens/Dashboard/HomeScreen.dart';
