@@ -1,16 +1,4 @@
 # fca
 
-A new Flutter project.
+https://github.com/KhizarJamshaidIqbal/fca_App/assets/112169672/2f6428d6-60df-417e-a0d2-52fb9b2e52e6
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
